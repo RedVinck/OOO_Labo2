@@ -33,12 +33,9 @@ public class CoderingApp extends Application {
         Label codeLabeloutput = new Label("Result= ");
         Label codeLabeloutputResult = new Label("Here will be the output");
         Label codeLabelAlgoritmetypes = new Label("Algoritm types");
-        ObservableList<String> options =
-                FXCollections.observableArrayList(
-                        "CaeserCijfer",
-                        "Spiegeling"
-                );
-        final ComboBox codeComboBoxAlgoritmes = new ComboBox(options);
+        String options []= {"CaeserCijfer","Spiegeling"};
+        final ComboBox codeComboBoxAlgoritmes = new ComboBox(FXCollections
+                .observableArrayList(options));
         Button codeBtnDecode = new Button("Decode");
         Button codeBtnCode = new Button("Code");
 
@@ -53,22 +50,28 @@ public class CoderingApp extends Application {
         codeBtnDecode.setOnAction(new CheckResultCodeHandler(){
             @Override
             public void handle(ActionEvent event) {
-                if (codeComboBoxAlgoritmes.equals(String.valueOf("CaeserCijfer"))){
+                if (codeComboBoxAlgoritmes.getValue().equals("CaeserCijfer")){
                codeLabeloutputResult.setText(Caesarcijfer.codeDecoderen(codeTextFieldInput.getText()));
                 }
-                else if (codeComboBoxAlgoritmes.equals(String.valueOf("Spiegelijk"))){
+                else if (codeComboBoxAlgoritmes.getValue().equals("Spiegelijk")){
                     codeLabeloutputResult.setText(Spiegeling.codeDecoderen(codeTextFieldInput.getText()));
+                }
+                else {
+                    codeLabeloutputResult.setText("ERROR");
                 }
             }
         });
         codeBtnCode.setOnAction(new CheckResultCodeHandler(){
             @Override
             public void handle(ActionEvent event) {
-                if (codeComboBoxAlgoritmes.equals(String.valueOf("CaeserCijfer"))){
+                if (codeComboBoxAlgoritmes.getValue().equals("CaeserCijfer")){
                     codeLabeloutputResult.setText(Caesarcijfer.codeCoderen(codeTextFieldInput.getText()));
                 }
-                else if (codeComboBoxAlgoritmes.equals(String.valueOf("Spiegelijk"))){
+                else if (codeComboBoxAlgoritmes.getValue().equals("Spiegelijk")){
                     codeLabeloutputResult.setText(Spiegeling.codeCoderen(codeTextFieldInput.getText()));
+                }
+                else {
+                    codeLabeloutputResult.setText("ERROR");
                 }
             }
         });
