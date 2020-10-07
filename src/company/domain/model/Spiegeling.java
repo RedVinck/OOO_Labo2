@@ -1,6 +1,6 @@
 package company.domain.model;
 
-public class Spiegeling  {
+public class Spiegeling implements  CodeBewerking {
 
     public static String codeDecoderen(String Code) {  //APO -> OPA
 

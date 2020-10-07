@@ -1,6 +1,6 @@
 package company.domain.model;
 
-public class Caesarcijfer {
+public class Caesarcijfer implements CodeBewerking{
     public static String codeDecoderen(String Code) {
         String result="";
         for (int i = 0; i < Code.length(); i++) {

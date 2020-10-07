@@ -1,8 +1,12 @@
 package company.domain.model;
 
 public interface CodeBewerking {
-     String codeDecoderen(String Code) ;
+     static String codeDecoderen(String Code) {
+          return null;
+     }
 
 
-     String codeCoderen(String code) ;
+     static String codeCoderen(String code) {
+          return null;
+     }
 }
