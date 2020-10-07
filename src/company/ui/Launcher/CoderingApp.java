@@ -30,12 +30,14 @@ public class CoderingApp extends Application {
 
         Label codeLabeltinput = new Label("Line to (de)code");
         TextField codeTextFieldInput = new TextField();
+
         Label codeLabeloutput = new Label("Result= ");
         Label codeLabeloutputResult = new Label("Here will be the output");
+
         Label codeLabelAlgoritmetypes = new Label("Algoritm types");
         String options []= {"CaeserCijfer","Spiegeling"};
-        final ComboBox codeComboBoxAlgoritmes = new ComboBox(FXCollections
-                .observableArrayList(options));
+
+        final ComboBox codeComboBoxAlgoritmes = new ComboBox(FXCollections.observableArrayList(options));
         Button codeBtnDecode = new Button("Decode");
         Button codeBtnCode = new Button("Code");
 
@@ -47,6 +49,7 @@ public class CoderingApp extends Application {
         root.getChildren().add(codeComboBoxAlgoritmes);
         root.getChildren().add(codeBtnDecode);
         root.getChildren().add(codeBtnCode);
+
         codeBtnDecode.setOnAction(new CheckResultCodeHandler(){
             @Override
             public void handle(ActionEvent event) {

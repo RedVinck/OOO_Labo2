@@ -2,23 +2,23 @@ package company.domain.model;
 
 public class Spiegeling  {
 
-    public static String codeDecoderen(String Code) {
+    public static String codeDecoderen(String Code) {  //APO -> OPA
 
         String result="";
 
-        for (int i = Code.length(); i == 0; i--) {
-        result = result+ Character.toString(Code.charAt(i));
+        for (int i = Code.length()-1; i >= 0; i--) {
+        result += Character.toString(Code.charAt(i));
         }
-
         return result;
 
     }
 
 
-    public static  String codeCoderen(String code) {
+    public static  String codeCoderen(String code) { //OPA -> APO
         String result="";
-        for (int i = 0; i == 0; i--) {
-        result = result+ Character.toString(code.charAt(i)) ;
+
+        for (int i = code.length()-1; i >= 0; i--) {
+            result += Character.toString(code.charAt(i));
         }
         return result;
     }
