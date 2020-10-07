@@ -53,7 +53,7 @@ public class CoderingApp extends Application {
                 if (codeComboBoxAlgoritmes.getValue().equals("CaeserCijfer")){
                codeLabeloutputResult.setText(Caesarcijfer.codeDecoderen(codeTextFieldInput.getText()));
                 }
-                else if (codeComboBoxAlgoritmes.getValue().equals("Spiegelijk")){
+                else if (codeComboBoxAlgoritmes.getValue().equals("Spiegeling")){
                     codeLabeloutputResult.setText(Spiegeling.codeDecoderen(codeTextFieldInput.getText()));
                 }
                 else {
@@ -67,7 +67,7 @@ public class CoderingApp extends Application {
                 if (codeComboBoxAlgoritmes.getValue().equals("CaeserCijfer")){
                     codeLabeloutputResult.setText(Caesarcijfer.codeCoderen(codeTextFieldInput.getText()));
                 }
-                else if (codeComboBoxAlgoritmes.getValue().equals("Spiegelijk")){
+                else if (codeComboBoxAlgoritmes.getValue().equals("Spiegeling")){
                     codeLabeloutputResult.setText(Spiegeling.codeCoderen(codeTextFieldInput.getText()));
                 }
                 else {
